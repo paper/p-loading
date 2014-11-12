@@ -3,30 +3,40 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Paper Loading</title>
+	<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width" />
 	<link rel="stylesheet" href="p-loading.css" />
 	<style type="text/css">
-		html{background-color:#333;}
+		html{background-color:#333; font-family:verdana;}
+		.footer{ text-align:center; padding:50px 0 20px; }
+		a{ color:#666; font-size:12px; }
 		
 		h1, h2{
 			color:#B39D7C;
-			font-family:verdana;
 			text-align:center;
-			padding:50px 0 10px;
 		}
 		
 		h1{
 			font-size:18px;
 			color:#ccc;
+			margin:30px 0 50px;
 		}
 		h2{
 			font-size:14px;
+			margin-bottom:30px;
 		}
 		
+		.block{
+			margin-bottom:60px;
+		}
 		
 		/* 容器用来调节里面loading的宽度 */
 		.your-loading-wrap{
 			width:300px;
-			margin:30px auto;
+			margin:10px auto;
+		}
+		.block-heart h2{ margin-bottom:50px; }
+		.block-heart .your-loading-wrap{
+			width:200px;
 		}
 	</style>
 </head>
@@ -34,15 +44,41 @@
 	
 	<h1>Paper Loading</h1>
 	
-	<h2>Road</h2>
-	<div class="your-loading-wrap">
-		<div class="p-loading-road"><i></i></div>
+	<div class="block block-road">
+		<h2>Road</h2>
+		
+		<div class="your-loading-wrap">
+			<div class="p-loading-road"><i></i></div>
+		</div>
 	</div>
 	
-	<h2>Circle</h2>
-	<div class="your-loading-wrap">
-		<div class="p-loading-circle"><i></i></div>
+	<div class="block block-circle">
+		<h2>Circle</h2>
+		
+		<div class="your-loading-wrap">
+			<div class="p-loading-circle"><i></i></div>
+		</div>
 	</div>
 	
+	<div class="block block-bubble">
+		<h2>Bubble</h2>
+		
+		<div class="your-loading-wrap">
+			<div class="p-loading-bubble"><i></i></div>
+		</div>
+	</div>
+	
+	<div class="block block-heart">
+		<h2>Heart</h2>
+		
+		<div class="your-loading-wrap">
+			<div class="p-loading-heart"><i></i></div>
+		</div>
+	</div>
+	
+	
+	<div class="footer">
+		<a target="_blank" href="https://github.com/paper/p-loading">Github</a>
+	</div>
 </body>
 </html>

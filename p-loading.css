@@ -470,4 +470,199 @@
 }
 
 
+/*----- 泡泡 -----*/
+.p-loading-bubble{
+	width:50px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+	position:relative;
+}
+.p-loading-bubble:before,
+.p-loading-bubble:after,
+.p-loading-bubble i:before,
+.p-loading-bubble i:after{
+	position:absolute;
+	content:"";
+	width:0;
+	height:0;
+	border:1px solid #0097FB;
+	border-radius:50%;
+	left:25px;
+	top:25px;
+	opacity:0;
+	
+	-webkit-animation-duration: 2.5s;
+	-webkit-animation-timing-function: ease-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-play-state: running;
+	
+	animation-duration: 2.5s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;
+}
 
+.p-loading-bubble:before{
+	-webkit-animation-name: p-loading-bubble-action-1;
+	-webkit-animation-delay: 0;
+	
+	animation-name: p-loading-bubble-action-1;
+	animation-delay: 0;
+}
+
+.p-loading-bubble:after{
+	-webkit-animation-name: p-loading-bubble-action-1;
+	-webkit-animation-delay: 0.2s;
+	
+	animation-name: p-loading-bubble-action-1;
+	animation-delay: 0.2s;
+}
+
+.p-loading-bubble i:before{
+	-webkit-animation-name: p-loading-bubble-action-1;
+	-webkit-animation-delay: 0.5s;
+	
+	animation-name: p-loading-bubble-action-1;
+	animation-delay: 0.5s;
+}
+
+.p-loading-bubble i:after{
+	-webkit-animation-name: p-loading-bubble-action-1;
+	-webkit-animation-delay: 0.9s;
+	
+	animation-name: p-loading-bubble-action-1;
+	animation-delay: 0.9s;
+}
+
+
+@-webkit-keyframes p-loading-bubble-action-1{
+	0% {
+		width:0;
+		height:0;
+		left:25px;
+		top:25px;
+		opacity:1;
+	}
+	100% {
+		width:50px;
+		height:50px;
+		left:0px;
+		top:0px;
+		opacity:0;
+	}
+}
+@keyframes p-loading-bubble-action-1{
+	0% {
+		width:0;
+		height:0;
+		left:25px;
+		top:25px;
+		opacity:1;
+	}
+	100% {
+		width:50px;
+		height:50px;
+		left:0px;
+		top:0px;
+		opacity:0;
+	}
+}
+
+
+/*----- 心跳 -----*/
+.p-loading-heart{
+	width:100%;
+	height:10px;
+	position:relative;
+}
+.p-loading-heart:before{
+	position:absolute;
+	content:"";
+	width:4px;
+	height:4px;
+	border-radius:50%;
+	background-color:#0097FB;
+	left:-30%;
+	top:0;
+	
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-play-state: running;
+	
+	animation-duration: 2s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;
+}
+
+.p-loading-heart:before{
+	-webkit-animation-name: p-loading-heart-action-1;
+	-webkit-animation-delay: 0;
+	
+	animation-name: p-loading-heart-action-1;
+	animation-delay: 0;
+}
+
+
+@-webkit-keyframes p-loading-heart-action-1{
+	0% {
+		left:0%;
+		opacity:0;
+	}
+	40%{
+		left:40%;
+		top:0;
+		opacity:1;
+	}
+	50%{
+		left:45%;
+		top:-30px;
+	}
+	60%{
+		left:50%;
+		top:30px;
+	}
+	70%{
+		left:55%;
+		top:0;
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		opacity:0;
+	}
+}
+@keyframes p-loading-heart-action-1{
+	0% {
+		left:0%;
+		opacity:0;
+	}
+	40%{
+		left:40%;
+		top:0;
+		opacity:1;
+	}
+	50%{
+		left:45%;
+		top:-30px;
+	}
+	60%{
+		left:50%;
+		top:30px;
+	}
+	70%{
+		left:55%;
+		top:0;
+		opacity:1;
+	}
+	100% {
+		left:100%;
+		opacity:0;
+	}
+}
