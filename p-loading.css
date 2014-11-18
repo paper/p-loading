@@ -666,3 +666,74 @@
 		opacity:0;
 	}
 }
+
+
+
+/*----- 微信 -----*/
+.p-loading-weixin{
+  width: 30px;
+  height:30px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.p-loading-weixin:before{
+	position:absolute;
+	content:"";
+	width: 22px;
+	height: 22px;
+	border-radius:50%;
+  border-width:4px;
+  border-style:solid;
+  border-color:#222 #222 #222 #0097FB;
+  opacity:0.8;
+  left:0;
+  top:0;
+	
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: normal;
+	-webkit-animation-play-state: running;
+	
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: normal;
+	animation-play-state: running;
+}
+
+.p-loading-weixin:before{
+	-webkit-animation-name: p-loading-weixin-action-1;
+	-webkit-animation-delay: 0;
+	
+	animation-name: p-loading-weixin-action-1;
+	animation-delay: 0;
+}
+
+@keyframes p-loading-weixin-action-1{
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+@-webkit-keyframes p-loading-weixin-action-1{
+	0% {
+		transform:rotate(0deg);
+	}
+	100% {
+		transform:rotate(360deg);
+	}
+}
+
+
+
+
+
+
+
+
+
