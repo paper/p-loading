@@ -709,7 +709,7 @@
 
   animation-name: p-loading-weixin-action-1;
   animation-delay: 0;
-  }
+}
 
 @keyframes p-loading-weixin-action-1{
   0% {
@@ -729,7 +729,120 @@
 	}
 }
 
+/*----- 微信 视频加载-----*/
+.p-loading-weixin-video{
+  width: 40px;
+  height:40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border:1px solid #0097FB;
+  border-radius:50%;
+  opacity:0.7;
+}
 
+.p-loading-weixin-video i,
+.p-loading-weixin-video i:before,
+.p-loading-weixin-video b,
+.p-loading-weixin-video b:before{
+  position:absolute;
+  width: 17px;
+  height: 34px;
+  content:"";
+  
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-play-state: running;
+  -webkit-animation-delay: 0;
+  
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-delay: 0;
+}
+
+.p-loading-weixin-video i,
+.p-loading-weixin-video b{
+  top:3px;
+  overflow:hidden;
+  background-color: transparent;
+}
+
+.p-loading-weixin-video i:before,
+.p-loading-weixin-video b:before{
+  background-color: #0097FB;
+  top:0px;
+}
+
+/*右侧 半圆容器*/
+.p-loading-weixin-video i{
+  left:20px;
+  border-radius: 0 17px 17px 0;
+}
+
+/*右侧 旋转的色块*/
+.p-loading-weixin-video i:before{
+  left:-17px;
+  transform-origin: right center;
+  border-radius: 17px 0 0 17px;
+  
+  -webkit-animation-name: p-loading-weixin-video-action-1;
+  animation-name: p-loading-weixin-video-action-1;
+}
+
+/*左侧 半圆容器*/
+.p-loading-weixin-video b{
+  left:3px;
+  border-radius: 17px 0 0 17px;
+}
+
+/*左侧 旋转的色块*/
+.p-loading-weixin-video b:before{
+  left:17px;
+  transform-origin: left center;
+  border-radius: 0 17px 17px 0;
+  
+  -webkit-animation-name: p-loading-weixin-video-action-2;
+  animation-name: p-loading-weixin-video-action-2;
+}
+
+@-webkit-keyframes p-loading-weixin-video-action-1{
+  0% {
+    transform:rotate(0deg);
+  }
+  50%,100%{
+    transform:rotate(180deg);
+  }
+}
+@keyframes p-loading-weixin-video-action-1{
+  0% {
+    transform:rotate(0deg);
+  }
+  50%,100%{
+    transform:rotate(180deg);
+  }
+}
+
+@-webkit-keyframes p-loading-weixin-video-action-2{
+  0%,50% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(180deg);
+  }
+}
+@keyframes p-loading-weixin-video-action-2{
+  0%,50% {
+    transform:rotate(0deg);
+  }
+  100% {
+    transform:rotate(180deg);
+  }
+}
 
 /*----- Facebook -----*/
 

@@ -53,6 +53,17 @@ css3 loading...
 2. https://developer.mozilla.org/en-US/docs/Web/CSS/timing-function
 3. http://www.sitepoint.com/css3-transitions-cubic-bezier-timing-function/?utm_source=tuicool
 
+###Weixin Video
+
+做这个，死了不少脑细胞。。。。  
+一开始我知道圆、半圆、1/4圆好做，但任意弧度呢（有点像一小块披萨）？？
+
+1. 先作一个透明的，右半圆容器 `A`，设置 `overflow:hidden`
+2. 再在这个 `A` 内做一个左半圆 `B`，让 `B` 和 `A` 的垂直边缘贴合，形成一个圆 `O`
+3. 设置 `B` `transform-origin: right center 0;`，让 `B` 围绕 `O` 的圆心旋转
+4. 这样看起来，`B` 就会慢慢出现在 `A` 里面，并且占满整个 `A` （就是动画的前一半）
+5. 后一半的动画，你应该想到了。同样的道理，设置左半圆容器和内半圆。只是左半圆动画的时候，右半圆保持静态。
+6. 这样，你就看到了完整的动画了。 :D
 
 
 
